@@ -1,0 +1,2 @@
+# RecipesApp
+AngularJS recipes SPA
