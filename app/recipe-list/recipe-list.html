@@ -1,0 +1,13 @@
+<div>
+    <table>
+        <thead>
+            <tr><th>Recipes</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="recipe in recipesList">
+                <td>{{$index + 1}}</td>
+                <td>{{recipe.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
