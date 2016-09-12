@@ -3,7 +3,7 @@
 angular.module('recipeApp.list', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/list', {
+        $routeProvider.when('/recipe-list', {
             templateUrl: 'recipe-list/recipe-list.html',
             controller: 'RecipeListCtrl'
         });
@@ -15,6 +15,7 @@ angular.module('recipeApp.list', ['ngRoute'])
         $scope.recipesList = [
             {
                 name: 'lasagna',
+                id: 1,
                 ingredients: [
                     {name: 'lasagna noodles', quantity: 12},
                     {name: 'lean ground beef', quantity: '1 pound'},
@@ -29,6 +30,7 @@ angular.module('recipeApp.list', ['ngRoute'])
             },
             {
                 name: 'fried eggs',
+                id: 2,
                 ingredients: [
                     {name: 'eggs', quantity: 2},
                     {name: 'salt', quantity: 'to taste'}

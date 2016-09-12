@@ -4,6 +4,8 @@
 angular.module('myApp', [
     'ngRoute',
     'recipeApp.list',
+    'recipeApp.new',
+    'recipeApp.view',
     //'myApp.view1',
     //'myApp.view2',
     'myApp.version'
@@ -11,5 +13,5 @@ angular.module('myApp', [
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/list'});
+  $routeProvider.otherwise({redirectTo: '/recipe-list'});
 }]);
