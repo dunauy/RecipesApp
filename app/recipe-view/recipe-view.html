@@ -1,3 +1,27 @@
 <div>
-    Recipe View : {{recipe.name}}
+    <p>Recipe detail ({{recipe.name}})</p>
+    <div class="recipeView">
+        <table>
+            <thead>
+                <tr>
+                    <th><span>Ingredients / Quantity</span></th>
+                    <th><span>Steps</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="ingredientsList">
+                            <ingredients></ingredients>
+                        </div>
+                    </td>
+                    <td>
+                        <div  class="ingredientsList">
+                            <steps></steps>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

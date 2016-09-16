@@ -2,15 +2,17 @@
 
 angular.module('recipeApp.view', ['ngRoute'])
 
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/recipe-view/:id', {
+    .config(['$routeProvider', 'recipeRoutesServiceProvider', function ($routeProvider, routesServiceProvider) {
+        
+        var routesService = routesServiceProvider.$get();
+        
+        $routeProvider.when(routesService.getRecipeViewRoute(), {
             templateUrl: 'recipe-view/recipe-view.html',
             controller: 'RecipeViewCtrl'
         });
     }])
     
-    .controller('RecipeViewCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
-        $scope.recipe = $scope.recipesList.filter(function (item) {
-            return item.id === $routeParams.id;
-        });
+    .controller('RecipeViewCtrl', ['$scope', '$routeParams', 'recipeAPIService', function ($scope, $routeParams, recipeAPIService) {
+        var recipe = recipeAPIService.getRecipeById($routeParams.id);
+        $scope.recipe = recipe;
     }]);

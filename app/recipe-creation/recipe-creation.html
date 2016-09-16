@@ -1,3 +1,58 @@
 <div>
-    New recipes section
+    New recipe
+    <div class="newRecipeForm">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Steps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="newIngredientForm">
+                            <div class="ingredientSection">
+                                <p>Ingredient</p>
+                                <input type="text" ng-model="formIngredient.name"/>
+                            </div>
+                            <div class="ingredientSection">
+                                <p>Quantity</p>
+                                <input type="text" ng-model="formIngredient.quantity"/>
+                            </div>
+                            <div class="ingredientSection">
+                                <button ng-click="addIngredient()">Add Ingredient</button>
+                            </div>
+                            <div class="clear"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="newStepForm">
+                            <input type="text" ng-model="formStep.description"/>
+                            <button ng-click="addStep()">Add Step</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="ingredientsList">
+                            <ingredients></ingredients>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="stepsList">
+                            <steps></steps>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        
+        </table>
+
+        <span class="recipeName">Recipe name</span>
+        <input class="recipeName" type="text" ng-model="recipe.name"/>
+        <button class="createBtn" ng-click="createRecipe()">create</button>
+    </div>
+    
 </div>

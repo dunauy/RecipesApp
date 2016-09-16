@@ -6,7 +6,7 @@
         <tbody>
             <tr ng-repeat="recipe in recipesList">
                 <td>{{$index + 1}}</td>
-                <td>{{recipe.name}}</td>
+                <td><a href="#!{{routesService.getRecipeViewRoute(recipe.id)}}">{{recipe.name}}</a></td>
             </tr>
         </tbody>
     </table>

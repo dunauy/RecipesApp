@@ -28,3 +28,50 @@
   content: "";
   padding: 0;
 }
+
+.recipeView {
+    width: 70%,
+    margin: auto
+},
+
+.newRecipeForm {
+    width: 70%;
+    margin: auto;
+}
+
+.newRecipeForm > table {
+    width: 100%;
+}
+
+.newIngredientForm > .ingredientSection, .newStepForm > input {
+    float:left;
+    margin: 10px;
+}
+
+.ingredientSection > button, .newStepForm > button {
+    margin: 10px;
+}
+
+.recipeName {
+    width: 100%;
+    margin: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.ingredientsList, .stepsList {
+    height: 200px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+}
+
+.createBtn {
+    margin: 10px;
+}
+
+.listData {
+    margin: 5px;
+}
